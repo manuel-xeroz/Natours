@@ -1,4 +1,5 @@
 .navigation {
+
     &__checkbox {
         display: none;
     }
@@ -36,7 +37,7 @@
         right: 6.5rem;
         background-image: radial-gradient($color-primary-light, $color-primary-dark);
         z-index: 1000;
-        transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+        transition: transform .8s cubic-bezier(0.83, 0, 0.17, 1);
 
         @include respond(tab-port) {
             top: 4.5rem;
@@ -55,17 +56,13 @@
         top: 0;
         left: 0;
         z-index: 1500;
-
         opacity: 0;
         width: 0;
-        transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        transition: all .8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
     }
 
     &__list {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
+        @include center-a-div;
         list-style: none;
         text-align: center;
         width: 100%;
@@ -86,7 +83,7 @@
             text-decoration: none;
             text-transform: uppercase;
             background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
-            background-size: 220%;
+            background-size: 225%;
             transition: all .4s;
 
             span {
@@ -94,15 +91,14 @@
                 display: inline-block;
             }
         }
-        
+
         &:hover,
         &:active {
             background-position: 100%;
             color: $color-primary;
-            transform: translateX(1rem);
+            transform: translateX(1rem);;
         }
     }
-
 
     //FUNCTIONALITY
     &__checkbox:checked ~ &__background {
@@ -113,7 +109,6 @@
         opacity: 1;
         width: 100%;
     }
-
 
     //ICON
     &__icon {
@@ -137,8 +132,8 @@
             transition: all .2s;
         }
 
-        &::before { top: -.8rem; }
-        &::after { top: .8rem; }
+        &::before { top: -.8rem;}
+        &::after { top: .8rem;}
     }
 
     &__button:hover &__icon::before {

@@ -11,11 +11,12 @@
         padding: 2rem;
     }
 
-    &__icon {
+    &__icon{
         font-size: 6rem;
         margin-bottom: .5rem;
-        display: inline-block;
         background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        display: inline-block;
+        letter-spacing: .2rem;
         -webkit-background-clip: text;
         color: transparent;
 
